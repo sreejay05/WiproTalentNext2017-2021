@@ -1,0 +1,20 @@
+8) Write a program to print all numbers backwards from 100 to 0 i.e. 100 99 98 97 96 . . . 4 3 2 1 0:
+
+
+
+
+import java.util.Scanner;
+public class Reverse
+{
+	public static void main(String[] args) 
+	{
+		int number, i;
+		Scanner s= new Scanner(System.in);
+		System.out.print(" Enter the Number: ");
+		number = s.nextInt();	
+		for(i = number; i >= 1; i--)
+		{
+			System.out.print(i +"\t"); 
+		}	
+	}
+}

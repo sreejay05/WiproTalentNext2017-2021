@@ -1,0 +1,21 @@
+4)Write a program to accept two numbers and print whether their sum is EVEN or ODD:
+
+
+import java.util.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+		int n1,n2;
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the n1:");
+		n1=s.nextInt();
+		System.out.print("Enter the n2:");
+		n2=s.nextInt();
+		int sum=n1+n2;
+		if(sum%2==0)
+			System.out.println(sum+ "is even");
+		else
+			System.out.println(sum+ "is odd");
+	}
+}

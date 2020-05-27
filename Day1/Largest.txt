@@ -1,0 +1,28 @@
+2)Write a program to accept two numbers and print the greater value of the two:
+
+
+import java.util.Scanner;
+
+public class Largest
+{
+	public static void main(String[] args) 
+	{
+		int n1, n2;
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print(" Please Enter the Num1 : ");
+		num1 = s.nextInt();	
+		
+		System.out.print(" Please Enter the Num2 : ");
+		num2 = s.nextInt();	
+		
+		if(num1 > num2) 
+	    {
+			System.out.println("The Largest Number = " + num1);          
+	    } 
+	    else 
+	    { 
+	    	System.out.println("The Largest Number = " + num2);        
+	    } 
+	}	
+}
