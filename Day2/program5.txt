@@ -1,6 +1,6 @@
 5)Design an algorithm to find the least perfect square, which is divisible by each of 21, 36 and 66.
 
-public class prog5{
+public class program5{
     public static void main(String[]args) {
         int a[]={21,36,66};
         int n=a.length;
