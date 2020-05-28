@@ -1,0 +1,14 @@
+3)Design an algorithm to calculate the factorial of a number N. The value of N is provided as an input by the user.
+
+import java.util.*;
+public class prog3{
+    public static void main(String args[]) throws Exception {
+        Scanner s=new Scanner(System.in);
+        int N=s.nextInt();
+        int fact=1;
+        for(int i=1;i<=N;i++){
+            fact = fact *i;
+        }
+        System.out.println("Factorial of "+N+" is "+fact);
+    }
+}
