@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        Scanner s=new Scanner (System.in);
+        String s1=s.nextLine();
+        String s2=s.nextLine();
+        if(s1.length()<=5 && s2.length()<=5) {
+            String s3 = s1 + s2;
+            s3 = s3.toLowerCase();
+            char temp[] = s3.toCharArray();
+            Arrays.sort(temp);
+            System.out.println(temp);
+        }
+    }
+}
