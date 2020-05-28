@@ -1,0 +1,19 @@
+1)Write a Java Program to accept 25 integer elements for an array then find the maximum number in the set and display it:
+
+import java.util.*;
+public class prog1{
+    public static void main(String args[]) throws Exception {
+        Scanner s=new Scanner(System.in);
+        int[] a=new int[25];
+        for(int i=0;i<25;i++){
+            a[i]=s.nextInt();
+        }
+        int max=a[0];
+        for(int i=1;i<25;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
