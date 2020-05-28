@@ -1,0 +1,52 @@
+5)Design an algorithm to find the least perfect square, which is divisible by each of 21, 36 and 66.
+
+public class prog5{
+    public static void main(String[]args) {
+        int a[]={21,36,66};
+        int n=a.length;
+        System.out.println(lps(a,n));
+    }
+    public static int lps(int arr[],int n) {
+        int minsq,i=3;
+        int l=lcm(arr,n);
+        minsq=(int)l;
+        int count=0;
+        while(l>1 && l%2==0) {
+            count++;
+            l=l/2;
+        }
+        if(count % 2 !=0) {
+            minsq= minsq *2;
+        }
+        while(l>1) {
+            count=0;
+            while(l%i==0) {
+                count++;
+                l=l/i;
+            }
+            if(count%2!=0) {
+                minsq=minsq*i;
+            }
+            i=i+2;
+        }
+        return minsq;
+    }
+    public static int lcm(int arr[],int n) {
+        if(n<1) {
+            return 0;
+        }
+        int l=arr[0];
+        for(int i=1;i<n;i++) {
+            l=l*arr[i]/gcd(l,arr[i]);
+        }
+        return l;
+    }
+    public static int gcd(int a,int b) {
+        if(b==0) {
+            return a;
+        }
+        else {
+            return gcd(b,a%b);
+        }
+    }
+}
