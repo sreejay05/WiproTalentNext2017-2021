@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+    public static void main(String args[]) throws Exception {
+        String str2 = "";
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        String str1 = str.toLowerCase();
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) == 'a' || str1.charAt(i) == 'e' || str1.charAt(i) == 'i' ||
+                    str1.charAt(i) == 'o' || str1.charAt(i) == 'u') {
+                str2 = str2 + str1.charAt(i);
+            }
+        }
+        if (str2 != "") {
+            String result = "";
+            for (int i = 0; i < str2.length(); i++) {
+                if(!result.contains(String.valueOf(str2.charAt(i)))) {
+                    result += String.valueOf(str2.charAt(i));
+                }
+            }
+            System.out.println(result);
+        } 
+        else {
+            System.out.print("Thank You");
+        }
+    }
+}
