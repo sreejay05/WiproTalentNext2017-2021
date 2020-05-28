@@ -1,0 +1,17 @@
+4)Design an algorithm to accept a given string from the user. The algorithm must then remove characters from the string which appear more than once. 
+
+import java.util.*;
+public class Main {
+    public static void main(String args[]) throws Exception {
+        Scanner s=new Scanner(System.in);
+        String str = s.nextLine();
+        String str1 = str.toLowerCase();
+        String str2="";
+        for (int i = 0; i < str1.length(); i++) {
+            if (!str2.contains(String.valueOf(str1.charAt(i)))) {
+                str2 = str2 + str1.charAt(i);
+            }
+        }
+        System.out.println(str2);
+    }
+}
